@@ -2,13 +2,8 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { ThemeToggle } from "../components/theme-toggle"
-import {
-  Menubar,
-  MenubarMenu,
-  MenubarTrigger,
-} from "@/components/ui/menubar"
 import { Button } from "@/components/ui/button";
+import clubposter from "../../public/final_intro_poster.jpg"
 
 export default function Home() {
   const router = useRouter();
@@ -30,6 +25,15 @@ export default function Home() {
 </div>
       </div>
       <p className="font-bold ml-1">Torvalds Club</p>
+      <div className="flex items-center justify-center min-h-screen">
+  <Image
+    src={clubposter}
+    alt="clubposter"
+    width={300}
+    height={400}
+    className="object-cover rounded"
+  />
+</div>
       </div>
   );
 }

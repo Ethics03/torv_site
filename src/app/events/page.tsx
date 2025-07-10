@@ -104,7 +104,7 @@ export default function EventsPage() {
         {/* Upcoming Events */}
         <section className="mb-16">
           <div className="flex items-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">All Events</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Upcoming Events</h2>
             <div className="ml-4 px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded-full text-sm font-medium">
               {upcomingEvents.length} events
             </div>
