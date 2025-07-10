@@ -1,11 +1,17 @@
+'use client'
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { ThemeToggle } from "../components/theme-toggle"
 import {
   Menubar,
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar"
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div>
       <div className='flex justify-between'>
@@ -16,17 +22,10 @@ export default function Home() {
             height={65}
             alt="Picture of the author"
         />
-<div className='mt-10 mr-10 flex justify-center gap-2'>
+<div className='mt-10 mr-10 pr-170 flex justify-center gap-2 a'>
       
-<Menubar>
-  <MenubarMenu>
-    <MenubarTrigger>Home</MenubarTrigger>
-    <MenubarTrigger>Events</MenubarTrigger>
-    <MenubarTrigger>Gallery</MenubarTrigger>
-    <MenubarTrigger>Other Clubs</MenubarTrigger>
-    <MenubarTrigger>Contact Us</MenubarTrigger>
-  </MenubarMenu>
-</Menubar>
+<Button>About Us</Button>
+<Button onClick={() => router.push('/events')}>Events</Button>
 
 </div>
       </div>
